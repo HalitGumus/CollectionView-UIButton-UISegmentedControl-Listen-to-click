@@ -1,7 +1,5 @@
 override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-    let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! AppDetailHeader
-    header.app = app
-
+    let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! DetailHeader
     header.segmentedControl.addTarget(self, action: #selector(segmentedControlAction(sender:)), for: UIControlEvents.valueChanged)
     
     return header
